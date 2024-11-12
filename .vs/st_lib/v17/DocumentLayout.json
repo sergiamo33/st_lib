@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sergi\\Desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F9DC24-28D5-4437-8489-0357586F863A}|Server\\Server.csproj|c:\\users\\sergi\\desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\server\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F9DC24-28D5-4437-8489-0357586F863A}|Server\\Server.csproj|solutionrelative:server\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3480813-9E19-41C1-884B-7CF6ABB70A22}|Client\\Client.csproj|c:\\users\\sergi\\desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\client\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3480813-9E19-41C1-884B-7CF6ABB70A22}|Client\\Client.csproj|solutionrelative:client\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\sergi\\Desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\Client\\Class1.cs",
+              "RelativeDocumentMoniker": "Client\\Class1.cs",
+              "ToolTip": "C:\\Users\\sergi\\Desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\Client\\Class1.cs",
+              "RelativeToolTip": "Client\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:39:03.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\sergi\\Desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\Server\\Class1.cs",
+              "RelativeDocumentMoniker": "Server\\Class1.cs",
+              "ToolTip": "C:\\Users\\sergi\\Desktop\\servidores\\pruebas\\server-data\\resources\\[standalone]\\st_lib\\Server\\Class1.cs",
+              "RelativeToolTip": "Server\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:22:21.188Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\bin\Release\Server.net.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\bin\Release\Server.net.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\bin\Release\CitizenFX.Core.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\bin\Release\CitizenFX.Server.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\bin\Release\CitizenFX.Core.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\bin\Release\CitizenFX.Server.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.csproj.Up2Date
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.net.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.net.pdb
