@@ -4,6 +4,7 @@ using CitizenFX.FiveM.Native; // FiveM natives (client only)
 using System;
 using System.Collections;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Client
 {
@@ -30,31 +31,22 @@ namespace Client
             displayText = false;
         }
 
-        private Coroutine DrawText3dContinuously()
+        private async Coroutine DrawText3dContinuously()
         {
-            return onTick();
-        }
-        private async Coroutine onTick()
-        {
-            while (true)
+            if (displayText)
             {
-                if (displayText)
-                {
-                    var playerPed = Natives.PlayerPedId();
-                    var pos = Natives.GetEntityCoords(playerPed, true);
+                var playerPed = Natives.PlayerPedId();
+                var pos = Natives.GetEntityCoords(playerPed, true);
 
-                    DrawText3D(pos, text);
-                }
-                await Delay(0);
+                DrawText3D(pos, text);
             }
-    
         }
 
         private void DrawText3D(Vector3 position, string text)
         {
             float worldX = position.X;
             float worldY = position.Y;
-            float worldZ = position.Z + 0.7f;
+            float worldZ = position.Z + 1.0f;
             float screenX = 0.0f;
             float screenY = 0.0f;
 
