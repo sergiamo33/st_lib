@@ -2,9 +2,6 @@
 using CitizenFX.FiveM; // FiveM game related types (client only)
 using CitizenFX.FiveM.Native; // FiveM natives (client only)
 using System;
-using System.Collections;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace Client
 {
