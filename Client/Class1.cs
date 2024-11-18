@@ -2,6 +2,8 @@
 using CitizenFX.FiveM; // FiveM game related types (client only)
 using CitizenFX.FiveM.Native; // FiveM natives (client only)
 using System;
+using System.Collections.Generic;
+
 
 namespace Client
 {
@@ -9,11 +11,17 @@ namespace Client
     {
         private bool displayText = false;
         private string text;
+        private bool isDrawing = false; 
+        
+        private readonly List<MarkerData> markers = new List<MarkerData>();
         public Class1()
         {
             EventHandlers["startDrawingText"] += new Action<string>(StartDrawingText);
             EventHandlers["stopDrawingText"] += new Action(StopDrawingText);
+            EventHandlers["AddMarker"] += new Action<int, Vector3, Vector3, Vector3, Vector3, int, int, int, int, bool, bool>(AddMarker);
+            EventHandlers["RemoveMarker"] += new Action<Vector3>(RemoveMarker);
             Tick += DrawText3dContinuously;
+            Tick += DrawMarkersContinuously;
         }
         [EventHandler("startDrawingText", Binding.Local)]
         private void StartDrawingText(string newText)
@@ -27,7 +35,8 @@ namespace Client
         {
             displayText = false;
         }
-
+        
+        
         private async Coroutine DrawText3dContinuously()
         {
             if (displayText)
@@ -63,6 +72,77 @@ namespace Client
                 Natives.AddTextComponentString(text);
                 Natives.DrawText(screenX, screenY);
             }
-        }        
+        }
+        private async Coroutine DrawMarkersContinuously()
+        {
+            while (true)
+            {
+                foreach (var marker in markers)
+                {
+                    if (marker.IsActive)
+                    {
+                        // Draw the marker
+                        Natives.DrawMarker(marker.Type, marker.Position.X, marker.Position.Y, marker.Position.Z, marker.Direction.X, marker.Direction.Y, marker.Direction.Z, marker.Rotation.X, marker.Rotation.Y, marker.Rotation.Z, marker.Scale.X, marker.Scale.Y, marker.Scale.Z, marker.Color.Red, marker.Color.Green, marker.Color.Blue, marker.Color.Alpha, marker.BobUpAndDown, marker.FaceCamera, 2, false, null, null, false);
+                    }
+                }
+                await Yield();
+            }
+        }
+        private void AddMarker(int type, Vector3 position, Vector3 direction, Vector3 rotation, Vector3 scale, int red, int green, int blue, int alpha, bool bobUpAndDown, bool faceCamera)
+        {
+            var marker = new MarkerData
+            {
+                Type = type,
+                Position = position,
+                Direction = direction,
+                Rotation = rotation,
+                Scale = scale,
+                Color = new MarkerColor(red, green, blue, alpha),
+                BobUpAndDown = bobUpAndDown,
+                FaceCamera = faceCamera,
+                IsActive = true
+            };
+
+            markers.Add(marker);
+        }
+        
+        private void RemoveMarker(Vector3 position)
+        {
+            var marker = markers.Find(m => m.Position == position);
+            if (marker != null)
+            {
+                marker.IsActive = false;
+                markers.Remove(marker);
+            }
+        }
+        
+        private class MarkerData
+        {
+            public int Type { get; set; }
+            public Vector3 Position { get; set; }
+            public Vector3 Direction { get; set; }
+            public Vector3 Rotation { get; set; }
+            public Vector3 Scale { get; set; }
+            public MarkerColor Color { get; set; }
+            public bool BobUpAndDown { get; set; }
+            public bool FaceCamera { get; set; }
+            public bool IsActive { get; set; }
+        }
+
+        private class MarkerColor
+        {
+            public int Red { get; }
+            public int Green { get; }
+            public int Blue { get; }
+            public int Alpha { get; }
+
+            public MarkerColor(int red, int green, int blue, int alpha)
+            {
+                Red = red;
+                Green = green;
+                Blue = blue;
+                Alpha = alpha;
+            }
+        }
     }
 }
