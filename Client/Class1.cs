@@ -12,14 +12,14 @@ namespace Client
         private bool displayText = false;
         private string text;
         private bool isDrawing = false;
-        private int setDistance = 100;
+        private float setDistance = 1;
         
         private readonly List<MarkerData> markers = new List<MarkerData>();
         public Class1()
         {
             EventHandlers["startDrawingText"] += new Action<string>(StartDrawingText);
             EventHandlers["stopDrawingText"] += new Action(StopDrawingText);
-            EventHandlers["AddMarker"] += new Action<int, Vector3, Vector3, Vector3, Vector3, int, int, int, int, bool, bool, int>(AddMarker);
+            EventHandlers["AddMarker"] += new Action<int, Vector3, Vector3, Vector3, Vector3, int, int, int, int, bool, bool, float>(AddMarker);
             EventHandlers["RemoveMarker"] += new Action<Vector3>(RemoveMarker);
             Tick += DrawText3dContinuously;
             Tick += DrawMarkersContinuously;
@@ -97,6 +97,7 @@ namespace Client
         {
             while (true)
             {
+                CheckMarkerDistance();
                 foreach (var marker in markers)
                 {
                     if (marker.IsActive)
@@ -107,7 +108,7 @@ namespace Client
                 await Yield();
             }
         }
-        private void AddMarker(int type, Vector3 position, Vector3 direction, Vector3 rotation, Vector3 scale, int red, int green, int blue, int alpha, bool bobUpAndDown, bool faceCamera, int setDistance)
+        private void AddMarker(int type, Vector3 position, Vector3 direction, Vector3 rotation, Vector3 scale, int red, int green, int blue, int alpha, bool bobUpAndDown, bool faceCamera, float distance)
         {
             var marker = new MarkerData
             {
@@ -119,11 +120,12 @@ namespace Client
                 Color = new MarkerColor(red, green, blue, alpha),
                 BobUpAndDown = bobUpAndDown,
                 FaceCamera = faceCamera,
-                SetDistance = setDistance,
+                SetDistance = distance,
                 IsActive = true
             };
 
             markers.Add(marker);
+            setDistance = distance;
         }
         
         private void RemoveMarker(Vector3 position)
@@ -147,7 +149,7 @@ namespace Client
             public bool BobUpAndDown { get; set; }
             public bool FaceCamera { get; set; }
             public bool IsActive { get; set; }
-            public int SetDistance { get; set; }
+            public float SetDistance { get; set; }
         }
 
         private class MarkerColor
