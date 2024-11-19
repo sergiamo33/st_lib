@@ -11,14 +11,15 @@ namespace Client
     {
         private bool displayText = false;
         private string text;
-        private bool isDrawing = false; 
+        private bool isDrawing = false;
+        private int setDistance = 100;
         
         private readonly List<MarkerData> markers = new List<MarkerData>();
         public Class1()
         {
             EventHandlers["startDrawingText"] += new Action<string>(StartDrawingText);
             EventHandlers["stopDrawingText"] += new Action(StopDrawingText);
-            EventHandlers["AddMarker"] += new Action<int, Vector3, Vector3, Vector3, Vector3, int, int, int, int, bool, bool>(AddMarker);
+            EventHandlers["AddMarker"] += new Action<int, Vector3, Vector3, Vector3, Vector3, int, int, int, int, bool, bool, int>(AddMarker);
             EventHandlers["RemoveMarker"] += new Action<Vector3>(RemoveMarker);
             Tick += DrawText3dContinuously;
             Tick += DrawMarkersContinuously;
@@ -73,6 +74,25 @@ namespace Client
                 Natives.DrawText(screenX, screenY);
             }
         }
+        
+        private void CheckMarkerDistance()
+        {
+            var playerPed = Natives.PlayerPedId();
+            var playerPos = Natives.GetEntityCoords(playerPed, true);
+
+            foreach (var marker in markers)
+            {
+                var distance = Natives.GetDistanceBetweenCoords(playerPos.X, playerPos.Y, playerPos.Z, marker.Position.X, marker.Position.Y, marker.Position.Z, true);
+                if (distance > setDistance)
+                {
+                    marker.IsActive = false;
+                }
+                else
+                {
+                    marker.IsActive = true;
+                }
+            }
+        }
         private async Coroutine DrawMarkersContinuously()
         {
             while (true)
@@ -81,14 +101,13 @@ namespace Client
                 {
                     if (marker.IsActive)
                     {
-                        // Draw the marker
                         Natives.DrawMarker(marker.Type, marker.Position.X, marker.Position.Y, marker.Position.Z, marker.Direction.X, marker.Direction.Y, marker.Direction.Z, marker.Rotation.X, marker.Rotation.Y, marker.Rotation.Z, marker.Scale.X, marker.Scale.Y, marker.Scale.Z, marker.Color.Red, marker.Color.Green, marker.Color.Blue, marker.Color.Alpha, marker.BobUpAndDown, marker.FaceCamera, 2, false, null, null, false);
                     }
                 }
                 await Yield();
             }
         }
-        private void AddMarker(int type, Vector3 position, Vector3 direction, Vector3 rotation, Vector3 scale, int red, int green, int blue, int alpha, bool bobUpAndDown, bool faceCamera)
+        private void AddMarker(int type, Vector3 position, Vector3 direction, Vector3 rotation, Vector3 scale, int red, int green, int blue, int alpha, bool bobUpAndDown, bool faceCamera, int setDistance)
         {
             var marker = new MarkerData
             {
@@ -100,6 +119,7 @@ namespace Client
                 Color = new MarkerColor(red, green, blue, alpha),
                 BobUpAndDown = bobUpAndDown,
                 FaceCamera = faceCamera,
+                SetDistance = setDistance,
                 IsActive = true
             };
 
@@ -127,6 +147,7 @@ namespace Client
             public bool BobUpAndDown { get; set; }
             public bool FaceCamera { get; set; }
             public bool IsActive { get; set; }
+            public int SetDistance { get; set; }
         }
 
         private class MarkerColor

@@ -9,3 +9,5 @@ C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.csproj.Up2Date
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.net.dll
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Release\Server.net.pdb
+C:\Users\SergiTrujilloRaja\Desktop\programación\st_lib\Server\obj\Release\Server.net.dll
+C:\Users\SergiTrujilloRaja\Desktop\programación\st_lib\Server\obj\Release\Server.net.pdb
