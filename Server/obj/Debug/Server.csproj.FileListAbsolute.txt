@@ -9,3 +9,14 @@ C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Debug\Server.csproj.Up2Date
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Debug\Server.net.dll
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Server\obj\Debug\Server.net.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\bin\Debug\Server.net.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\bin\Debug\Server.net.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\bin\Debug\CitizenFX.Core.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\bin\Debug\CitizenFX.Server.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\bin\Debug\CitizenFX.Core.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\bin\Debug\CitizenFX.Server.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\obj\Debug\Server.net.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Server\obj\Debug\Server.net.pdb

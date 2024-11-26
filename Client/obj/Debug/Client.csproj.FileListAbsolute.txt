@@ -11,3 +11,16 @@ C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Client\obj\Debug\Client.csproj.Up2Date
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Client\obj\Debug\Client.net.dll
 C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[standalone]\st_lib\Client\obj\Debug\Client.net.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\Client.net.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\Client.net.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\CitizenFX.Core.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\CitizenFX.FiveM.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\CitizenFX.FiveM.Native.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\CitizenFX.Core.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\CitizenFX.FiveM.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\bin\Debug\CitizenFX.FiveM.Native.pdb
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\obj\Debug\Client.csproj.Up2Date
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\obj\Debug\Client.net.dll
+C:\Users\sergi\Desktop\servidores\pruebas\server-data\resources\[st]\st_lib\Client\obj\Debug\Client.net.pdb

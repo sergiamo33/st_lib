@@ -24,6 +24,7 @@ namespace Client
             Tick += DrawText3dContinuously;
             Tick += DrawMarkersContinuously;
         }
+        
         [EventHandler("startDrawingText", Binding.Local)]
         private void StartDrawingText(string newText)
         {
@@ -36,8 +37,6 @@ namespace Client
         {
             displayText = false;
         }
-        
-        
         private async Coroutine DrawText3dContinuously()
         {
             if (displayText)
@@ -95,8 +94,6 @@ namespace Client
         }
         private async Coroutine DrawMarkersContinuously()
         {
-            while (true)
-            {
                 CheckMarkerDistance();
                 foreach (var marker in markers)
                 {
@@ -105,8 +102,6 @@ namespace Client
                         Natives.DrawMarker(marker.Type, marker.Position.X, marker.Position.Y, marker.Position.Z, marker.Direction.X, marker.Direction.Y, marker.Direction.Z, marker.Rotation.X, marker.Rotation.Y, marker.Rotation.Z, marker.Scale.X, marker.Scale.Y, marker.Scale.Z, marker.Color.Red, marker.Color.Green, marker.Color.Blue, marker.Color.Alpha, marker.BobUpAndDown, marker.FaceCamera, 2, false, null, null, false);
                     }
                 }
-                await Yield();
-            }
         }
         private void AddMarker(int type, Vector3 position, Vector3 direction, Vector3 rotation, Vector3 scale, int red, int green, int blue, int alpha, bool bobUpAndDown, bool faceCamera, float distance)
         {
